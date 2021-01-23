@@ -40,7 +40,7 @@ namespace LocalizationExample
                 var supportedCultures = new[]
                 {
                     new CultureInfo("en-US"),
-                    new CultureInfo("tr-TR")
+                    new CultureInfo("de-DE")
                 };
 
                 options.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");

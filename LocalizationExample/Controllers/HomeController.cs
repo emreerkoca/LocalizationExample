@@ -11,10 +11,10 @@ namespace LocalizationExample.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class HomeController : ControllerBase
     {
         private readonly IStringLocalizer<SharedResource> _stringLocalizer;
-        public WeatherForecastController(IStringLocalizer<SharedResource> stringLocalizer)
+        public HomeController(IStringLocalizer<SharedResource> stringLocalizer)
         {
             _stringLocalizer = stringLocalizer;
         }
@@ -22,7 +22,7 @@ namespace LocalizationExample.Controllers
         [HttpGet]
         public string Get()
         {
-             var value = _stringLocalizer.GetString("Sam");
+             var value = _stringLocalizer.GetString("Hello");
 
             return value;
         }
