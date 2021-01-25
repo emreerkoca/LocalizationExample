@@ -22,7 +22,7 @@ namespace LocalizationExample.Controllers
         [HttpGet]
         public string Get()
         {
-             var value = _stringLocalizer.GetString("Hello");
+            var value = _stringLocalizer["Hello"];
 
             return value;
         }
