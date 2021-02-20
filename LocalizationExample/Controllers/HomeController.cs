@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Resources;
 using LocalizationExample;
-using LocalizationExample.Shared;
+using LocalizationExample.Localize;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 
@@ -13,8 +13,8 @@ namespace LocalizationExample.Controllers
     [Route("[controller]")]
     public class HomeController : ControllerBase
     {
-        private readonly IStringLocalizer<SharedResource> _stringLocalizer;
-        public HomeController(IStringLocalizer<SharedResource> stringLocalizer)
+        private readonly IStringLocalizer<Resource> _stringLocalizer;
+        public HomeController(IStringLocalizer<Resource> stringLocalizer)
         {
             _stringLocalizer = stringLocalizer;
         }
